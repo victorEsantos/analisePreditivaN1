@@ -44,10 +44,10 @@ def gerar_dados_ficticios():
 
 if __name__ == '__main__':
     client = MongoClient(
-        "mongodb+srv://victor:*****@cluster0.pp6scwg.mongodb.net/?retryWrites=true&w=majority")
+        "mongodb+srv://victor:********@cluster1.8emaq.mongodb.net/?retryWrites=true&w=majority")
 
-    db = client.get_database('Cluster0')
-    collection = db.mycollection
+    db = client.get_database('Cluster1')
+    collection = db.mycollection2
 
     num_registros = 500
 

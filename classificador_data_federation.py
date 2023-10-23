@@ -7,10 +7,10 @@ from sklearn.metrics import accuracy_score
 if __name__ == '__main__':
 
     client = MongoClient(
-        "mongodb+srv://victor:********@cluster0.pp6scwg.mongodb.net/?retryWrites=true&w=majority")
+        "mongodb://victor:********@federateddatabaseinstance0-8emaq.a.query.mongodb.net/?ssl=true&authSource=admin")
 
-    db = client.get_database('Cluster0')
-    collection = db.mycollection
+    db = client.get_database('VirtualDatabase0')
+    collection = db.VirtualCollection0
 
     dados_pacientes = list(collection.find());
 
