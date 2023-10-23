@@ -14,8 +14,8 @@ def gerar_dados_ficticios():
     estado_civil = random.choice(['Solteiro', 'Casado', 'Divorciado', 'Viúvo'])
     escolaridade = random.choice(['Ensino Fundamental', 'Ensino Médio', 'Graduação', 'Pós-graduação'])
     cor_cabelo = random.choice(['Preto', 'Castanho', 'Loiro', 'Ruivo'])
-    nome = "******"
-    sobrenome = "******"
+    nome = random.choice(['Alice', 'Bob', 'Carlos', 'Diana', 'Eva', 'Fernando', 'Gabriela', 'Henrique', 'Isabel', 'João'])
+    sobrenome = random.choice(['Silva', 'Santos', 'Oliveira', 'Pereira', 'Almeida', 'Costa', 'Lima', 'Gonçalves', 'Araújo', 'Martins'])
 
     if resultado == 1:
         angina_induzida_por_exercicio = random.choices([0, 1], weights=[30, 70])[0]
@@ -44,7 +44,7 @@ def gerar_dados_ficticios():
 
 if __name__ == '__main__':
     client = MongoClient(
-        "mongodb+srv://victor:********@cluster1.8emaq.mongodb.net/?retryWrites=true&w=majority")
+        "mongodb+srv://victor:*******@cluster1.8emaq.mongodb.net/?retryWrites=true&w=majority")
 
     db = client.get_database('Cluster1')
     collection = db.mycollection2
