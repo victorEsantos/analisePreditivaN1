@@ -10,12 +10,6 @@ def gerar_dados_ficticios():
     eletrocardiograma = random.choice([0, 1, 2])
     frequencia_cardiaca_maxima = random.randint(100, 220)
     resultado = random.choice([0, 1])
-    time_futebol = random.choice(['Flamengo', 'Palmeiras', 'São Paulo', 'Corinthians', 'Grêmio'])
-    estado_civil = random.choice(['Solteiro', 'Casado', 'Divorciado', 'Viúvo'])
-    escolaridade = random.choice(['Ensino Fundamental', 'Ensino Médio', 'Graduação', 'Pós-graduação'])
-    cor_cabelo = random.choice(['Preto', 'Castanho', 'Loiro', 'Ruivo'])
-    nome = random.choice(['Alice', 'Bob', 'Carlos', 'Diana', 'Eva', 'Fernando', 'Gabriela', 'Henrique', 'Isabel', 'João'])
-    sobrenome = random.choice(['Silva', 'Santos', 'Oliveira', 'Pereira', 'Almeida', 'Costa', 'Lima', 'Gonçalves', 'Araújo', 'Martins'])
 
     if resultado == 1:
         angina_induzida_por_exercicio = random.choices([0, 1], weights=[30, 70])[0]
@@ -23,8 +17,8 @@ def gerar_dados_ficticios():
         angina_induzida_por_exercicio = random.choice([0, 1])
 
     dados = {
-        'Nome': nome,
-        'Sobrenome': sobrenome,
+        'Nome': '*****',
+        'Sobrenome': '******',
         'Idade': idade,
         'Sexo': sexo,
         'Pressao_Sanguinea': pressao_sanguinea,
@@ -34,19 +28,15 @@ def gerar_dados_ficticios():
         'Frequencia_Cardiaca_Maxima': frequencia_cardiaca_maxima,
         'Angina_Induzida_por_Exercício': angina_induzida_por_exercicio,
         'Resultado': resultado,
-        'Time_Futebol': time_futebol,
-        'Estado_Civil': estado_civil,
-        'Escolaridade': escolaridade,
-        'Cor_Cabelo': cor_cabelo
     }
 
     return dados
 
 if __name__ == '__main__':
     client = MongoClient(
-        "mongodb+srv://victor:*******@cluster1.8emaq.mongodb.net/?retryWrites=true&w=majority")
+        "mongodb+srv://victor:AAAAAAA@cluster0.4m70ehm.mongodb.net/?retryWrites=true&w=majority")
 
-    db = client.get_database('Cluster1')
+    db = client.get_database('Cluster0')
     collection = db.mycollection2
 
     num_registros = 500

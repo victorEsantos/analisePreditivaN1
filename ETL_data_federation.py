@@ -4,7 +4,7 @@ if __name__ == '__main__':
 
     # Pega os dados do cluster0 + cluster1 com data federation, os dois clusters foram aglutinados
     client_federation = MongoClient(
-        "mongodb://victor:********@federateddatabaseinstance0-8emaq.a.query.mongodb.net/?ssl=true&authSource=admin")
+        "mongodb+srv://victor:AAAAAAA@cluster0.4m70ehm.mongodb.net/?retryWrites=true&w=majority")
 
     db_federation = client_federation.get_database('VirtualDatabase0')
     collection = db_federation.VirtualCollection0
@@ -23,7 +23,7 @@ if __name__ == '__main__':
 
     #Inserir dados após o ETL feito
     client = MongoClient(
-        "mongodb+srv://victor:*******@cluster1.8emaq.mongodb.net/?retryWrites=true&w=majority")
+        "mongodb+srv://victor:catolica123@AAAAAAA.4m70ehm.mongodb.net/?retryWrites=true&w=majority")
 
     db = client.get_database('Cluster1')
     collection = db.mycollectionFeitoETL
